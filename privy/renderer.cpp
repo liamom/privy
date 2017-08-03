@@ -28,3 +28,6 @@ void privy::Renderer::RenderClear() {
 void privy::Renderer::RenderCopy(SDL_Texture *tex, const SDL_Rect *srcrect, const SDL_Rect *dstrect) {
   SDL_RenderCopy(sdl_ptr_, tex, srcrect, dstrect);
 }
+void privy::Renderer::RenderPresent() {
+  SDL_RenderPresent(sdl_ptr_);
+}

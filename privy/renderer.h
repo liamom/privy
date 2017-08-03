@@ -21,6 +21,7 @@ public:
 
   void RenderClear();
   void RenderCopy(SDL_Texture *tex, const SDL_Rect * srcrect = nullptr, const SDL_Rect * dstrect = nullptr);
+  void RenderPresent();
 };
 
 }

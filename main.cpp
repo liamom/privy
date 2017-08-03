@@ -32,8 +32,10 @@ int main(int argc, char *argv[]) {
     using namespace privy;
     Window win("game", 50, 50, 500, 500);
     Renderer ren(win);
+    ren.RenderClear();
     Texture tex = ren.createTexture(path + "/hello.bmp");
     ren.RenderCopy(tex);
+    ren.RenderPresent();
     pause_console();
   } catch(privy::Exception &e) {
     std::cout << e.what() << std::endl;

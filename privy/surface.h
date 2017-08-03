@@ -12,7 +12,7 @@ namespace privy {
 
 class Surface : public sdl_base<SDL_Surface> {
 public:
-  Surface(const char *bmp);
+  explicit Surface(const char *bmp);
   ~Surface();
 
 };
