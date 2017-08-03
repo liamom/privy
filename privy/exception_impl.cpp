@@ -3,16 +3,23 @@
 //
 
 #include "exception_impl.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 namespace privy {
+namespace internal {
 
-Exception::Exception(const char* file, const char* func, int line) {
-  char* sdl_error = SDL_GetError();
+_Exception::_Exception(const char *file, const char *func, int line) {
+  const char *sdl_error = SDL_GetError();
   stream_ << file << "|"
           << func << ":"
           << line << "|"
-          << " SDL error:" << sdl_error << " ";
+          << " SDL error:" << sdl_error << "| ";
 }
 
+const char *_Exception::what() const noexcept {
+  message_ = stream_.str();
+  return message_.c_str();
+}
+
+}
 }

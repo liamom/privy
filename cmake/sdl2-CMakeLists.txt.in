@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8.2)
+
+project(sdl2-download NONE)
+
+include(ExternalProject)
+ExternalProject_Add(sdl2-download
+  URL               http://www.libsdl.org/release/SDL2-devel-2.0.5-VC.zip
+  SOURCE_DIR        "${CMAKE_BINARY_DIR}/sdl2-src"
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND     ""
+  INSTALL_COMMAND   ""
+  TEST_COMMAND      ""
+)

@@ -7,9 +7,8 @@
 
 namespace privy {
 
-class Exception : std::exception {
+class Exception : public std::exception {
 public:
-  using std::exception::what;
 };
 
 }
