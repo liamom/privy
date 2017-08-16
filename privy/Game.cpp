@@ -1,8 +1,8 @@
 //
-// Created by Owner on 7/29/2017.
+// Created by lioth on 8/5/2017.
 //
 
-#include "privy.h"
+#include "Game.h"
 #include <SDL.h>
 #include <SDL_render.h>
 #include <iostream>

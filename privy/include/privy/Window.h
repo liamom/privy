@@ -6,7 +6,6 @@
 #define PROJECT_WINDOW_H
 
 #include <SDL_video.h>
-#include "exception_impl.h"
 #include "sdl_base.h"
 
 namespace privy {

@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8.2)
+
+project(@PACKAGE_NAME@-download NONE)
+
+include(ExternalProject)
+ExternalProject_Add(@PACKAGE_NAME@-download
+  URL               @PACKAGE_URL@
+  SOURCE_DIR        "${CMAKE_CURRENT_BINARY_DIR}/@PACKAGE_NAME@-src"
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND     ""
+  INSTALL_COMMAND   ""
+  TEST_COMMAND      ""
+)

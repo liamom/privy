@@ -5,7 +5,7 @@
 #ifndef PROJECT_RENDERER_H
 #define PROJECT_RENDERER_H
 
-#include <SDL_render.h>
+#include <SDL.h>
 #include "sdl_base.h"
 #include "texture.h"
 #include <string>
@@ -21,6 +21,10 @@ public:
 
   void RenderClear();
   void RenderCopy(SDL_Texture *tex, const SDL_Rect * srcrect = nullptr, const SDL_Rect * dstrect = nullptr);
+  void RenderCopy(SDL_Texture *tex, const SDL_Rect &source_rect, const SDL_Rect &dest_rect);
+  void RenderCopy(SDL_Texture *tex, const SDL_Rect &source_rect, const SDL_Rect &dest_rectconst, double angle);
+  void RenderCopy(SDL_Texture *tex, const SDL_Rect &source_rect, const SDL_Rect &dest_rectconst, double angle, const SDL_Point &center, SDL_RendererFlip flip);
+
   void RenderPresent();
 };
 

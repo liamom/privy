@@ -3,6 +3,7 @@
 //
 
 #include "Window.h"
+#include "exception_impl.h"
 
 privy::Window::Window(const char *title, int x, int y, int w, int h, SDL_WindowFlags flags) {
   sdl_ptr_ = SDL_CreateWindow(title, x, y, w, h, flags);
